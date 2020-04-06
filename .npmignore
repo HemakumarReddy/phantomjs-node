@@ -1,0 +1,11 @@
+node_modules
+.idea
+src
+docs
+__tests__
+__mocks__
+.*
+*.md
+examples
+coverage
+decls

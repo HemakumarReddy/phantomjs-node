@@ -1,0 +1,24 @@
+sudo: false
+language: node_js
+node_js:
+- stable
+- '11'
+- '10'
+- '9'
+- '8'
+cache:
+  directories:
+  - node_modules
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: findamir@gmail.com
+  api_key:
+    secure: Bd1fbn3wY/zmCHWcrXU5Mo1oPDj3rprSCvU+uctDVFwb4EbCdJZv0lUU72+1u4XCQR+BUx/0x7hzFiu+qim9Y2YMsgCanUcaPvaYMW/zkLE5hDMhcV1fbFBpZQxt+UmhTuZpyGddQqZWXMsiTW696NiRpfa8hbMygcNVWQG5VzA=
+  on:
+    tags: true
+    repo: amir20/phantomjs-node
+before_install:
+- npm install -g codecov
+after_success:
+- codecov
